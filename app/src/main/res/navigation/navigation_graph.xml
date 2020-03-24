@@ -14,6 +14,7 @@
             android:id="@+id/main_to_second"
             app:destination="@id/secoundFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/secoundFragment"
         android:name="a1824jj.jp.ac.aiit.navisampel1.SecoundFragment"
@@ -23,6 +24,19 @@
             android:name="userName"
             app:argType="string"
             android:defaultValue="No named added" />
+        <action
+            android:id="@+id/second_to_third"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="a1824jj.jp.ac.aiit.navisampel1.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 
 </navigation>
