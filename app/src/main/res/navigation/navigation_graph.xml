@@ -18,6 +18,11 @@
         android:id="@+id/secoundFragment"
         android:name="a1824jj.jp.ac.aiit.navisampel1.SecoundFragment"
         android:label="fragment_secound"
-        tools:layout="@layout/fragment_secound" />
+        tools:layout="@layout/fragment_secound" >
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue="No named added" />
+    </fragment>
 
 </navigation>

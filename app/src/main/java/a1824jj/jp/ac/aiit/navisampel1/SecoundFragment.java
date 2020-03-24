@@ -2,11 +2,13 @@ package a1824jj.jp.ac.aiit.navisampel1;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -62,6 +64,16 @@ public class SecoundFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_secound, container, false);
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        SecoundFragmentArgs secoundFragmentArgs = SecoundFragmentArgs.fromBundle(getArguments());
+        String userName = secoundFragmentArgs.getUserName();
+
+        TextView textView = getView().findViewById(R.id.nameTextView);
+        textView.setText(userName);
+    }
 
     public interface OnFragmentInteractionListener {
     }
