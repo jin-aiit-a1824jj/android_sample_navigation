@@ -12,8 +12,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import a1824jj.jp.ac.aiit.navisampel1.R;
+import androidx.navigation.Navigation;
 
 public class MainFragment extends Fragment {
 
@@ -37,6 +39,14 @@ public class MainFragment extends Fragment {
         //mViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(MainViewModel.class);
         //mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         // TODO: Use the ViewModel
+
+        Button button = getView().findViewById(R.id.mainButton);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.main_to_second);
+            }
+        });
     }
 
 }
